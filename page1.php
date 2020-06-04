@@ -9,8 +9,10 @@
     <h1>Ceci est la table du 3</h1>
     <?php
         $number=3;
+        
         for($i=1;$i<11;$i++){
-            echo '- '.$number*$i.' <br>';
+            $result=$number*$i;
+            echo '- '.$i.' x '.$number.' = '.$result.' <br>';
         }
 
 
