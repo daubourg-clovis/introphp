@@ -23,18 +23,18 @@
         </div>
     </form>
     <?php
-        //if(isset($_POST['tables'])){
-            $tables=$_POST['tables'];
-            $number=intval($tables);
-            print_r($tables);
+        if(isset($_POST['tables'])){
+            $tables=$_POST['tables'];          
             if(isset($_POST['validate'])){
-                echo 'Ceci est la table du '.$number.' <br>';
-                for($i=0;$i<11;$i++){
-                    $resultat=$number*$i;
-                    echo '- '.$number.' x '.$i.' = '.$resultat.' <br>';
+                foreach($tables as $table){
+                    echo 'Ceci est la table du '.$table.' <br>';
+                    for($i=0;$i<11;$i++){
+                        $resultat=$table*$i;
+                        echo '- '.$table.' x '.$i.' = '.$resultat.' <br>';
+                    }
                 }
             }
-       // }
+        }
 
 
         
